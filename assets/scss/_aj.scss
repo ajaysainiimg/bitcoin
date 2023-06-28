@@ -1,0 +1,766 @@
+// ? @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+// [data-page-name=example] {
+    @include media-breakpoint(basic) {
+        // **** [ Hero Section ] *******
+        .heroSection {
+            background: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/hero_Bg.jpg) no-repeat, center;
+            background-size: cover;
+            & .innerSection {
+                & .coinImg {
+                    & img {
+                        animation: rotateAnimation 6s linear infinite;
+                    }
+                }
+            }
+        }
+        // **** [ Why Chose Use Section ] *******
+        .whyChoseSection {
+            & .innerSection {
+                & .cardSection {
+                    & .card{
+                            border: 2px solid transparent !important;
+                            transition: all ease-in-out 0.3s;
+                        & .card-body{
+                            & .card-img {
+                                height: 70px;
+                                & img {
+                                    transition: all ease-in-out 0.3s;
+                                }
+                            }
+                            & .card-title{
+                                transition: all ease-in-out 0.3s;
+                            }
+                        }
+                        &:hover{
+                            border-color: $theme1 !important;
+                            transform: translateY(-10px);
+                            & .card-body{
+                                & .card-img {
+                                    & img {
+                                        // filter: brightness(0);
+                                    }
+                                }
+                                & .card-title {
+                                    // color: $theme1 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // *** [ over Investor Section ] ********
+        .investorsSection {
+            & .innerSection{
+                & .cardSection{
+                    & .card{
+                        transition: all ease-in-out 0.3s;
+                        border: 1px solid $theme2;
+                        & .card-body {
+                            & .cardImg{
+                                & .userImg {
+                                    width: 100px;
+                                    height: 100px;
+                                }
+                            }
+                            & .socialIcon {
+                                & .socillinks {
+                                    & li {
+                                        & a {
+                                            width: 35px;
+                                            height: 35px;
+                                            transition: all ease-in-out 0.3s;
+                                            background-color: $gray-300;
+                                            & img {
+                                            transition: all ease-in-out 0.3s;
+                                            }
+                                            &:hover {
+                                                background: $theme1 !important;
+                                                & img {
+                                                    filter: invert(1);
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            border-color: $theme1;
+                        }
+                    }
+                }
+            }
+        }
+        // *** [ Card Support Section ] ********
+        .cardSupportSection {
+            & .innerSection {
+                & .carrencieImg {
+                    & img {
+                        animation: rotate-animation 50s infinite linear;
+                        -webkit-animation: rotate-animation 50s infinite linear;
+                        -moz-animation: rotate-animation 50s infinite linear;
+                        -o-animation: rotate-animation 50s infinite linear;
+                    }
+                    @keyframes rotate-animation {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                    
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }   
+                }
+            }
+        }
+        // *** [ Easy Step Section ] ********
+        .stepCardSection {
+            & .innerSection {
+                & .stepCards {
+                    & .stepCard {
+                        position: relative;
+                        &::before{
+                            content: '';
+                            width: 100%;
+                            height: 35px;
+                            background: url(../img/icon/sideDotedImg.svg) no-repeat, center;
+                            position: absolute;
+                            background-size: cover;
+                            top: 35%;
+                            right: -50%;
+                            transform: translate(0%, -100%);
+                            z-index: 0;
+                        }
+                        & .card-body {
+                            position: relative;
+                            z-index: 1;
+                            & .innerbody {
+                                background-color: $gray-500;
+                                max-width: 150px;
+                                max-height: 150px;
+                                width: 100%;
+                                height: 100%;
+                                & .subInnerBody {
+                                    background-color: $theme2;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    & .iconImg {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & > div {
+                        &:last-child{
+                            & .stepCard {
+                                &::before{
+                                display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // !======== [ About Us Page Scss ] ===========
+        .bitcoinFeatures {
+            & .innerSection {
+                & .cardSection {
+                    & .card{
+                        overflow: hidden;
+                        transition: all 0.5s ease-out 0s;
+                        & .card-body{
+                            & .card-img {
+                                height: 70px;
+                            }
+                        }
+                        &:hover{
+                            z-index: 1;
+                            transform: scale(1.2);
+                            box-shadow: 0px 0px 50px 0px rgba($black, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+        .counterSection {
+            background-image: linear-gradient(90deg, rgba($black, 0.7) 30%, rgba($black, 0.7) 100%), url(../img/aboutcounterbg.png);
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .howtoworkWallet {
+            & .innerSection{
+                & .cardSection {
+                    & .card {
+                        & .card-body {
+                            & .innerBody {
+                                height: 100px;
+                                width: 100px;
+                                position: relative;
+                                &::before{
+                                    content: '';
+                                    border: 2px dashed  $gray-900;
+                                    -webkit-animation: rotation 50s infinite linear;
+                                    animation: rotation 50s infinite linear;
+                                    position: absolute;
+                                    inset: 0;
+                                    margin: auto;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 100%;
+                                    @keyframes rotation {
+                                        0% {
+                                            transform: rotate(0deg);
+                                        }
+                                    
+                                        100% {
+                                            transform: rotate(360deg);
+                                        }
+                                    } 
+                                }
+                                & .numberofCard {
+                                    width: 30px;
+                                    height: 30px;
+                                    right: 0;
+                                    top: 0;
+                                }
+                                & .innerSubBody {
+                                    & .formImg {
+                                        // height: 50px;
+                                        // width: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .walletCoinSection {
+            & .innerSection {
+                & .card {
+                    & .card-body {
+                        z-index: 1;
+                    }
+                    & span{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        z-index: 0;
+                        &:nth-child(1){
+                            transform:rotate(0deg);
+                        }
+                        &:last-child{
+                            transform:rotate(180deg);
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width:100%;
+                            height: 2px;
+                            background: $theme1;
+                            animation: animate 4s linear infinite;
+                        }
+                    }
+                    @keyframes animate {
+                        0% {
+                            transform:scaleX(0);
+                            transform-origin: left;
+                        }
+                        50%
+                        {
+                            transform:scaleX(1);
+                            transform-origin: left;
+                        }
+                        50.1%
+                        {
+                            transform:scaleX(1);
+                            transform-origin: right;
+                        
+                        }
+                        100%
+                        {
+                            transform:scaleX(0);
+                            transform-origin: right;
+                        
+                        }
+                        
+                        
+                    } 
+                    
+                }
+            }
+        }
+        .brandSection {
+            & .innerSection {
+                & .brandSlider {
+                    & .item {
+                        & .brandImg {
+                            height: 60px;
+                            & img {
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // !========== [ Blog Page Scss ] ===========
+        // ****************Blog**************
+        .blogSection {
+            & .inner_section {
+            & .singalBlogmainImage{
+                    min-height: 250px;
+                & img {
+                    object-fit: cover;
+                }
+            }
+            & .filtersBtn {
+                z-index: 4;
+            }
+            & .leftSide {
+                & .teamCard {
+                    & .card {
+                        cursor: unset;
+                        & .card-body {
+                            transition: all ease-in-out 0.3s;
+                            position: relative;
+                            & .card-img-top {
+                                object-fit: cover;
+                                transition: all ease-in-out 3s;
+                            }
+                            & .icons {
+                                transform: translateY(-120%);
+                                top: 10px;
+                                right: 10px;
+                                transition: all ease-in-out 0.3s;
+                                z-index: 3;
+                            & .socillinkfooter {
+                                z-index: 2;
+                                & li {
+                                    & a {
+                                        background-color: $white;
+                                        width: 30px;
+                                        height: 30px;
+                                        margin: 0px !important;
+                                        transition: all ease-in-out 0.3s;
+                                        & img {
+                                            transition: all ease-in-out 0.3s;
+                                        }
+                                        &:hover{
+                                            background-color: $theme1;
+                                            & img {
+                                                filter: invert(1);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            }
+                        &:hover{
+                            & .card-img-top {
+                                transform: scale(1.1);
+                            }
+                            & .icons {
+                                transform: translateY(0);
+                            }
+                        }
+                        }
+                        & .innerBody {
+                            bottom: 14%;
+                            left: 0%;
+                            transition: all  ease-in-out 0.3s;
+                            & .blogLink {
+                                & .blogHeading {
+                                    transition: all  ease-in-out 0.3s;
+                                    &:hover{
+                                        color: $theme1 !important;
+                                    }
+                                }
+                            }
+                        
+                        }
+                        & .readmorebtnPrent {
+                        margin: -73px 0px 0px 0px;
+                        transition: all  ease-in-out 0.3s;
+                        z-index: 2;
+                        & .readMoreBtn  {
+                            color: $white !important;
+                        }
+                        }
+                        & .card-img-top {
+                        object-fit: cover;
+                        border-radius: 0px !important;
+                        }
+                    }
+                }
+                & .singalPostcommunicate {
+                & li {
+                    &::marker {
+                    color: $theme2 !important;
+                    font-size: 18px;
+                    }
+                }
+                }
+            }
+            & .rightSideBar {
+                & .sideBarCard {
+                & .card {
+                    box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+                    & .card-body {
+                    & .sideBarheading {
+                        display: inline-block;
+                        position: relative;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        &::after{
+                            content: "";
+                            height: 2px;
+                            width: 30px;
+                            background: $theme1;
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0;
+                            // transform: translate(-0%, -50%);
+                        }
+                    }
+                    & .input-group {
+                        & .form-control {
+                        background: transparent;
+                        border-bottom: 1px solid $theme2 !important;
+                            &:focus-visible{
+                            border-color: $theme1;
+                            }
+                            &::placeholder{
+                            color: rgba($black, 0.3);
+                            }
+                        }
+                        & .input-group-text {
+                        & .searchBtn {
+                            width: 32px;
+                            background: transparent !important;
+                            border-bottom: 1px solid $theme2 !important;
+                            & img {
+                            // filter: brightness(100);
+                            }
+                        }
+                        }
+                    }
+                    & .caregorie {
+                        & li {
+                        border-bottom: 0.6px solid rgba($black, 0.1);
+                        & .caregorieLink {
+                            transition: all ease-in-out 0.3s;
+                            &::before {
+                            content: '+';
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            }
+                            &.active {
+                            color: $theme1 !important;
+                            letter-spacing: 1px;
+                            }
+                            &:hover {
+                            color: $theme1 !important;
+                            }
+                        }
+                        }
+                    }
+                    & .userPost {
+                        & .userImg {
+                        height: 80px;
+                        width: 80px;
+                        overflow: hidden;
+                        transition: all ease-in-out 0.3s;
+                        & img {
+                            object-fit: cover;
+                            transition: all ease-in-out 0.3s;
+                        }
+                        &::before {
+                            content: '';
+                            inset: 0;
+                            position: absolute;
+                            background-color: rgba($black, 0.3);
+                            opacity: 0;
+                            transition: all ease-in-out 0.3s;
+                        }
+                        &:hover {
+                            & img {
+                            transform: scale(1.1);
+                            }
+                            &::before {
+                            opacity: 1;
+                            z-index: 2;
+                            }
+                        }
+                        }
+                        & .postLink {
+                        transition: all ease-in-out 0.3s;
+                        &:hover {
+                            color: $theme1 !important;
+                        }
+                        }
+                    }
+                    & .tagsGroup {
+                        & .tagslink {
+                            border: 1px dashed $theme2;
+                            transition: all ease-in-out 0.3s;
+                            border-radius: 2px !important;
+                            & a {
+                            transition: all ease-in-out 0.3s;
+                            }
+                        &:hover {
+                            background-color: $theme2 !important;
+                            & a {
+                            color: $white !important;
+                            letter-spacing: 1px;
+                            }
+                        }
+                        }
+                    }
+                    & .contactBlog {
+                        & .iconImg {
+                        height: 30px;
+                        }
+                        & > div {
+                        &:first-child {
+                            padding: 0px !important;
+                        }
+                        }
+                        & .postLink {
+                        transition: all ease-in-out 0.3s;
+                        &:hover {
+                            color: $theme2 !important;
+                        }
+                        }
+                    }
+                    }
+                }
+                }
+            }
+            }
+        }
+
+        // *******************Pagination*******************
+        .pagination {
+            & .page-item {
+            & .page-link {
+                color: $black;
+                border: 0px;
+                border-radius: 0px;
+                width: 35px;
+                height: 35px;
+                transition: all ease-in-out 0.3s;
+                &.next {
+                width: auto;
+                }
+                &:hover {
+                background: $theme2;
+                color: $white;
+                }
+            }
+            &.active {
+                & .page-link{
+                color: $white;
+                background: $theme2;
+                border-color: $theme2;
+                }
+            }
+            }
+        }
+        .contactusPage {
+            & .innerSection {
+                & .mainCenterPart {
+                    & .notificationCard {
+                            // background-color: rgba($black, 0.2);
+                            transition: all ease-in-out 0.3s;
+                            // border-bottom: 2px solid $black;
+                            &:hover{
+                                box-shadow: 0 0.125rem 0.25rem rgba($black, 0.075) !important;
+                                border-color: $theme1;
+                                color: $theme1 !important;
+                            }
+                        & .contactImg {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+        .heroSection{
+            & .innerSection {
+                & .mainheading {
+                    font-size: 50px !important;
+                    
+                }
+            }
+        }
+    }
+
+
+
+    @include media-breakpoint-up(xl) {
+        .heroSection{
+            & .innerSection {
+                & .mainheading {
+                    font-size: 55px !important;
+                    
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    @include media-breakpoint-down(xxl) {}
+
+    @include media-breakpoint-down(xl) {}
+
+    @include media-breakpoint-down(lg) {
+        .stepCardSection {
+            & .innerSection {
+                & .stepCards {
+                    & .stepCard {
+                        &::before{
+                            display: none;
+                        }
+                        & .card-body {
+                            & .innerbody {
+                                width: 120px;
+                                height: 120px;
+                                & .subInnerBody {
+                                    & .iconImg {
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .whyChoseSection {
+            & .innerSection {
+                & .cardSection {
+                    & .card{
+                        & .card-body{
+                            & .card-img {
+                                height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //  ! About Pase
+        .bitcoinFeatures {
+            & .innerSection {
+                & .cardSection {
+                    & .card{
+                        & .card-body{
+                            & .card-img {
+                                height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include media-breakpoint-down(md) {
+
+    }
+
+    @include media-breakpoint-down(sm) {
+        //  ! About Pase
+        .bitcoinFeatures {
+            & .innerSection {
+                & .cardSection {
+                    & .card{
+                        box-shadow: 0px 0px 10px 0px rgba($black, 0.1);
+                        & .card-body{
+                            & .card-img {
+                            }
+                        }
+                        &:hover{
+                            z-index: 1;
+                            transform: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+// }
+
+[data-bs-theme=dark] {
+    // & [data-page-name=example] {
+        @include dark-media-breakpoint(basic) {
+            
+        }
+        // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+        @include dark-media-breakpoint-up(sm) {
+        }
+        @include dark-media-breakpoint-up(md) {
+        }
+        @include dark-media-breakpoint-up(lg) {
+        }
+        @include dark-media-breakpoint-up(xl) {
+        }
+        @include dark-media-breakpoint-up(xxl) {
+        }
+    
+    
+        @include dark-media-breakpoint-down(xxl) {
+        }
+        @include dark-media-breakpoint-down(xl) {
+        }
+        @include dark-media-breakpoint-down(lg) {
+        }
+        @include dark-media-breakpoint-down(md) {
+        }
+        @include dark-media-breakpoint-down(sm) {
+        }
+    // }
+}
+
+// ! @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+
+@include media-breakpoint(basic) {
+}
+@include media-breakpoint-down(xxl) {
+}
+@include media-breakpoint-down(xl) {
+}
+@include media-breakpoint-down(lg) {
+}
+@include media-breakpoint-down(md) {
+}
+@include media-breakpoint-down(sm) {
+}
